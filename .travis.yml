@@ -1,0 +1,21 @@
+ 
+language: python
+
+before_install:
+    - wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+    - bash Miniconda3-latest-Linux-x86_64.sh -b
+    - . /home/travis/miniconda3/etc/profile.d/conda.sh
+    - conda update --yes conda
+    - conda config --add channels r
+    - conda create --yes -n test
+    - conda activate test
+    - conda install -y pycodestyle
+    - conda install --yes python=3.6
+    - conda install --yes matplotlib
+    - conda install --yes xlwt
+    - conda install --yes urllib
+    - conda install --yes seaborn
+      
+script:
+    - bash functional_test.sh
+    - python -m process_test.py
