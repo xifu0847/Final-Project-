@@ -118,7 +118,7 @@ def NCBI_url(gene_name):
 
     if summary == '':
         summary = 'No Summary available :('
-    time.sleep(0.2)
+    time.sleep(0.33)
 
     return uid, name, description, summary, organ
 
