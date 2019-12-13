@@ -13,7 +13,6 @@ before_install:
     - conda install --yes python=3.6
     - conda install --yes matplotlib
     - conda install --yes xlwt
-    - conda install --yes urllib
     - conda install --yes seaborn
       
 script:
