@@ -16,5 +16,5 @@ before_install:
     - conda install --yes seaborn
       
 script:
+    - python process_test.py
     - bash functional_test.sh
-    - python -m process_test.py

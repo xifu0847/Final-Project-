@@ -7,8 +7,6 @@ class TestProcessLibrary(unittest.TestCase):
     '''
     Unit test for process.py
     '''
-    def setUp(self):
-        pass
 
     def test_parse_input(self):
         header, gene = process.parse_input('merged_gene_counts.txt')
